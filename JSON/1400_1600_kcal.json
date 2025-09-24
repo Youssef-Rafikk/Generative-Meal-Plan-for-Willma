@@ -1,0 +1,561 @@
+{
+  "diets": [
+    {
+      "label_range_kcal": "1400–1600",
+      "diet_label": "Diet 12 – 1,412 kcal",
+      "total_kcal": 1412,
+      "macros": { "carbs_g": 135.9, "protein_g": 129.3, "fat_g": 37.5 },
+      "structures": [
+        {
+          "meals_per_day": 3,
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["200 g cottage cheese", "2 slices brown toast", "15 almonds"] },
+                { "items": ["4 eggs", "50 g oats", "1 cup almond milk"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["180 g salmon", "175 g potatoes", "100 g green salad"] },
+                { "items": ["180 g chicken breast", "150 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["180 g chicken breast", "150 g rice", "100 g green salad"] },
+                { "items": ["180 g salmon", "175 g potato", "100 g steamed vegetables"] }
+              ]
+            }
+          ]
+        },
+        {
+          "meals_per_day": 4,
+          "variant": "snack listed separately",
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["200 g cottage cheese", "2 slices brown toast", "15 almonds"] },
+                { "items": ["4 eggs", "40 g oats", "1 cup almond milk"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["130 g salmon", "125 g potatoes", "100 g green salad"] },
+                { "items": ["130 g chicken breast", "100 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": "Snack",
+              "options": [
+                { "items": ["1 banana", "200 g Greek yogurt"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["130 g chicken breast", "100 g rice", "100 g green salad"] },
+                { "items": ["130 g lean beef", "125 g potato", "100 g steamed vegetables"] }
+              ]
+            }
+          ]
+        },
+        {
+          "meals_per_day": 4,
+          "variant": "snack as meal 4",
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["200 g cottage cheese", "2 slices brown toast", "15 almonds"] },
+                { "items": ["4 eggs", "40 g oats", "1 cup almond milk"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["130 g salmon", "125 g potatoes", "100 g green salad"] },
+                { "items": ["130 g chicken breast", "100 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["130 g chicken breast", "100 g rice", "100 g green salad"] },
+                { "items": ["130 g salmon", "125 g potato", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 4,
+              "options": [
+                { "items": ["1 banana", "200 g Greek yogurt"] },
+                { "items": ["100 g cottage cheese", "1 apple"] }
+              ]
+            }
+          ]
+        },
+        {
+          "meals_per_day": 5,
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["200 g cottage cheese", "2 slices brown toast", "15 almonds"] },
+                { "items": ["4 eggs", "40 g oats", "1 cup almond milk"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["100 g salmon", "100 g potatoes", "100 g green salad"] },
+                { "items": ["100 g chicken breast", "80 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": "Snack",
+              "options": [
+                { "items": ["1 banana", "200 g Greek yogurt"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["100 g chicken breast", "80 g rice", "100 g green salad"] },
+                { "items": ["100 g salmon", "100 g potato", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 4,
+              "options": [
+                { "items": ["100 g chicken breast", "80 g rice", "100 g green salad"] },
+                { "items": ["100 g salmon", "100 g potato", "100 g steamed vegetables"] }
+              ]
+            }
+          ]
+        },
+        {
+          "meals_per_day": 6,
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["200 g cottage cheese", "2 slices brown toast", "15 almonds"] },
+                { "items": ["4 eggs", "30 g oats", "1 cup almond milk"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["80 g salmon", "80 g potatoes", "100 g green salad"] },
+                { "items": ["80 g chicken breast", "60 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["80 g chicken breast", "60 g rice", "100 g green salad"] },
+                { "items": ["80 g salmon", "80 g potato", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": "Snack",
+              "options": [
+                { "items": ["1 banana", "200 g Greek yogurt"] }
+              ]
+            },
+            {
+              "meal_number": 4,
+              "options": [
+                { "items": ["80 g chicken breast", "60 g rice", "100 g green salad"] },
+                { "items": ["80 g salmon", "80 g potato", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 5,
+              "options": [
+                { "items": ["80 g chicken breast", "60 g rice", "100 g green salad"] },
+                { "items": ["80 g salmon", "80 g potato", "100 g steamed vegetables"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "diet_label": "Diet 27 – 1,523 kcal",
+      "total_kcal": 1523,
+      "macros": { "carbs_g": 148, "protein_g": 130, "fat_g": 43 },
+      "structures": [
+        {
+          "meals_per_day": 3,
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["3 whole eggs", "60 g oats", "1 cup almond milk"] },
+                { "items": ["180 g Greek yoghurt", "80 g strawberry", "2 slices brown toast", "20 almonds"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["180 g chicken breast", "175 g potatoes", "100 g green salad"] },
+                { "items": ["180 g lean beef", "150 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["180 g chicken breast", "150 g rice", "100 g green salad"] },
+                { "items": ["180 g salmon", "175 g potato", "100 g steamed vegetables"] }
+              ]
+            }
+          ]
+        },
+        {
+          "meals_per_day": 4,
+          "variant": "snack listed separately",
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["3 whole eggs", "50 g oats", "1 cup almond milk"] },
+                { "items": ["180 g Greek yoghurt", "50 g strawberry", "2 slices brown toast", "15 almonds"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["130 g chicken breast", "125 g potatoes", "100 g green salad"] },
+                { "items": ["130 g lean beef", "100 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": "Snack",
+              "options": [
+                { "items": ["1 banana", "30 g nuts", "protein powder (scoop)"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["120 g chicken breast", "100 g rice", "100 g green salad"] },
+                { "items": ["130 g salmon", "125 g potato", "100 g steamed vegetables"] }
+              ]
+            }
+          ]
+        },
+        {
+          "meals_per_day": 4,
+          "variant": "snack as meal 4",
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["3 whole eggs", "50 g oats", "1 cup almond milk"] },
+                { "items": ["180 g Greek yoghurt", "50 g strawberry", "2 slices brown toast", "15 almonds"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["130 g chicken breast", "125 g potatoes", "100 g green salad"] },
+                { "items": ["130 g lean beef", "100 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["130 g chicken breast", "100 g rice", "100 g green salad"] },
+                { "items": ["130 g salmon", "125 g potato", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 4,
+              "options": [
+                { "items": ["1 banana", "30 g nuts", "protein powder (scoop)"] },
+                { "items": ["100 g cottage cheese", "1 apple"] }
+              ]
+            }
+          ]
+        },
+        {
+          "meals_per_day": 5,
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["3 whole eggs", "50 g oats", "1 cup almond milk"] },
+                { "items": ["180 g Greek yoghurt", "50 g strawberry", "2 slices brown toast", "15 almonds"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["100 g chicken breast", "100 g potatoes", "100 g green salad"] },
+                { "items": ["100 g lean beef", "80 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": "Snack",
+              "options": [
+                { "items": ["1 banana", "30 g nuts", "protein powder (scoop)"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["100 g chicken breast", "80 g rice", "100 g green salad"] },
+                { "items": ["100 g salmon", "100 g potato", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 4,
+              "options": [
+                { "items": ["100 g chicken breast", "80 g rice", "100 g green salad"] },
+                { "items": ["100 g salmon", "100 g potato", "100 g steamed vegetables"] }
+              ]
+            }
+          ]
+        },
+        {
+          "meals_per_day": 6,
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["3 whole eggs", "40 g oats", "1 cup almond milk"] },
+                { "items": ["180 g Greek yoghurt", "40 g strawberry", "2 slices brown toast", "10 almonds"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["80 g chicken breast", "80 g potatoes", "100 g green salad"] },
+                { "items": ["80 g lean beef", "60 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["80 g chicken breast", "60 g rice", "100 g green salad"] },
+                { "items": ["80 g salmon", "80 g potato", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": "Snack",
+              "options": [
+                { "items": ["1 banana", "30 g nuts", "protein powder (scoop)"] }
+              ]
+            },
+            {
+              "meal_number": 4,
+              "options": [
+                { "items": ["80 g chicken breast", "60 g rice", "100 g green salad"] },
+                { "items": ["80 g salmon", "80 g potato", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 5,
+              "options": [
+                { "items": ["80 g chicken breast", "60 g rice", "100 g green salad"] },
+                { "items": ["80 g salmon", "80 g potato", "100 g steamed vegetables"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "diet_label": "Diet 23 – 1,574 kcal",
+      "total_kcal": 1574,
+      "macros": { "carbs_g": 143.9, "protein_g": 145.3, "fat_g": 43.5 },
+      "structures": [
+        {
+          "meals_per_day": 3,
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["200 g cottage cheese", "3 slices brown toast", "20 almonds"] },
+                { "items": ["4 eggs", "50 g oats", "1 cup almond milk", "100 g Greek yogurt"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["180 g salmon", "175 g potatoes", "100 g green salad"] },
+                { "items": ["180 g chicken breast", "150 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["180 g chicken breast", "150 g rice", "100 g green salad"] },
+                { "items": ["180 g lean beef", "175 g potato", "100 g steamed vegetables"] }
+              ]
+            }
+          ]
+        },
+        {
+          "meals_per_day": 4,
+          "variant": "snack listed separately (v1)",
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["200 g cottage cheese", "2 slices brown toast", "15 almonds"] },
+                { "items": ["4 eggs", "40 g oats", "1 cup almond milk"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["180 g salmon", "175 g potatoes", "100 g green salad"] },
+                { "items": ["180 g chicken breast", "150 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": "Snack",
+              "options": [
+                { "items": ["1 banana", "200 g Greek yogurt"] },
+                { "items": ["150 g cottage cheese", "100 g cucumber"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["180 g chicken breast", "150 g rice", "100 g green salad"] },
+                { "items": ["180 g lean beef", "175 g potato", "100 g steamed vegetables"] }
+              ]
+            }
+          ]
+        },
+        {
+          "meals_per_day": 4,
+          "variant": "snack as meal 4 (v2)",
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["200 g cottage cheese", "2 slices brown toast", "15 almonds"] },
+                { "items": ["4 eggs", "40 g oats", "1 cup almond milk"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["130 g salmon", "125 g potatoes", "100 g green salad"] },
+                { "items": ["130 g chicken breast", "100 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["130 g chicken breast", "100 g rice", "100 g green salad"] },
+                { "items": ["130 g lean beef", "125 g potato", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 4,
+              "options": [
+                { "items": ["1 banana", "200 g Greek yogurt"] },
+                { "items": ["150 g cottage cheese", "100 g cucumber"] }
+              ]
+            }
+          ]
+        },
+        {
+          "meals_per_day": 5,
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["200 g cottage cheese", "2 slices brown toast", "15 almonds"] },
+                { "items": ["4 eggs", "40 g oats", "1 cup almond milk"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["130 g salmon", "125 g potatoes", "100 g green salad"] },
+                { "items": ["130 g chicken breast", "100 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": "Snack",
+              "options": [
+                { "items": ["1 banana", "200 g Greek yogurt"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["130 g chicken breast", "100 g rice", "100 g green salad"] },
+                { "items": ["130 g lean beef", "125 g potato", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 4,
+              "options": [
+                { "items": ["150 g cottage cheese", "100 g cucumber"] },
+                { "items": ["180 g Greek yoghurt", "50 g strawberry"] }
+              ]
+            }
+          ]
+        },
+        {
+          "meals_per_day": 6,
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["200 g cottage cheese", "2 slices brown toast", "15 almonds"] },
+                { "items": ["4 eggs", "30 g oats", "1 cup almond milk"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["80 g salmon", "100 g potatoes", "100 g green salad"] },
+                { "items": ["80 g chicken breast", "80 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["80 g chicken breast", "80 g rice", "100 g green salad"] },
+                { "items": ["80 g lean beef", "100 g potato", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": "Snack",
+              "options": [
+                { "items": ["1 banana", "200 g Greek yogurt"] }
+              ]
+            },
+            {
+              "meal_number": 4,
+              "options": [
+                { "items": ["80 g chicken breast", "80 g rice", "100 g green salad"] },
+                { "items": ["80 g lean beef", "100 g potato", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 5,
+              "options": [
+                { "items": ["80 g chicken breast", "80 g rice", "100 g green salad"] },
+                { "items": ["80 g lean beef", "100 g potato", "100 g steamed vegetables"] }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
