@@ -387,7 +387,7 @@ SPICY_REPLACEMENTS = [
 SWEETS_REPLACEMENTS = [
     Replacement("Fresh dates", "2–3 pcs / ~50 g"),
     Replacement("Seasonal fresh fruit", "150 g"),
-    Replacement("85% dark chocolate", "15 g"),
+    Replacement("85 percent dark chocolate", "15 g"),
 ]
 STARCHY_VEG_REPLACEMENTS = [
     Replacement("Roasted sweet potato", "200 g"),
@@ -459,6 +459,7 @@ def _pick_replacement_for_category_fallback(cat: str, allergies: List[str], disl
 def _token_replace(text: str, targets: List[str], replacement_text: str) -> str:
     if not targets:
         return text
+
     lead_qty = (
         r"(?:\b\d+(?:\.\d+)?\s*"
         r"(?:g|kg|ml|l|cup|cups|tbsp|tablespoons?|tsp|teaspoons?|"
@@ -470,7 +471,14 @@ def _token_replace(text: str, targets: List[str], replacement_text: str) -> str:
         r"(?:breast|thigh|drumstick|wing|wings|fillet|filet|steak|mince|"
         r"tenderloin|sirloin|ribeye|cutlet|white|whites|yolk|yolks)s?"
     )
-    target_alt = "|".join(sorted({re.escape(w.lower()) for w in targets}, key=len, reverse=True))
+
+    def plural_pattern(tok: str) -> str:
+        tok = re.escape(tok.lower())
+        return rf"(?:{tok})(?:es|s)?"
+
+    target_alt = "|".join(
+        sorted({plural_pattern(t) for t in targets if t}, key=len, reverse=True)
+    )
     pattern = rf"{lead_qty}(?:{qualifiers_before})?(?:{target_alt})(?:\s+{cuts_after})?\b"
     placeholder = "\uFFFFREPL\uFFFF"
     temp = re.sub(pattern, placeholder, text, flags=re.IGNORECASE)
@@ -478,6 +486,7 @@ def _token_replace(text: str, targets: List[str], replacement_text: str) -> str:
     out = re.sub(r"\s*\+\s*", " + ", out)
     out = re.sub(r"\s{2,}", " ", out).strip(" .")
     return out
+
 
 def _cleanup_artifacts(text: str) -> str:
     text = re.sub(r"\b(\w+)(\s+\1\b)+", r"\1", text, flags=re.IGNORECASE)
@@ -1024,21 +1033,6 @@ def export_diets_structures_json(
     label_range_kcal: str,
     outfile: str = "4_Week_Meal_Plan.json"
 ) -> None:
-    """
-    Writes a JSON file matching the requested schema:
-
-    {
-      "diets": [
-        {
-          "label_range_kcal": "2400–2600",
-          "diet_label": "...",
-          "total_kcal": 2533,
-          "macros": {},  # not computed here
-          "structures": [ { "meals_per_day": ..., "meals": [ ... ] } ]
-        }, ...
-      ]
-    }
-    """
     payload = {"diets": []}
     for d in diets:
         item = {
