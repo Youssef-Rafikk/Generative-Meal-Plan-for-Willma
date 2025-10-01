@@ -1,145 +1,152 @@
-Meal Planner (JSON → 4-Week Plan)
+Meal Planner (Excel + JSON → 4-Week Personalized Plan)
 
-A lightweight CLI that generates a personalized 4-week meal plan from JSON diet templates.
-It computes calorie needs (BMR/TDEE), selects the right calorie band, rewrites options to respect dietary rules/dislikes, and assembles a schedule with controlled repetition so it feels natural (not too samey, not too random).
+This project generates a personalized 4-week meal plan by combining two sources of information:
 
-Why this exists (the core idea)
+An authored diet template (JSON) → defines the structure of meals per day and suggested food options for different calorie bands.
 
-Start from authored options (JSON templates per calorie band).
+A structured nutrition database (Excel) → contains foods, macronutrient information, and tags used for substitutions and dietary adjustments.
 
-Personalize them:
+The system calculates calorie needs, selects the correct diet band, rewrites food options to respect dietary rules and dislikes, and assembles a realistic schedule with controlled repetition.
+The goal is a plan that feels varied but natural.
 
-Compute target calories from user metrics and goal.
+Why this exists
 
-Filter/transform options based on dietary rules (vegan/vegetarian, dairy-free, gluten-free) and dislikes (seafood, eggs, spicy foods, etc.).
+Most diet planners are either rigid (fixed meal plans) or chaotic (random food suggestions).
+This system finds the middle ground:
 
-Schedule meals for 4 weeks with probabilistic repetition control:
+Starts from curated meal templates.
 
-Within the same day, if two adjacent slots share the same option pool, avoid picking the exact same option 60% of the time (allowing repeats 40%).
+Personalizes them to the individual’s calorie needs and preferences.
 
-Across days, avoid reusing yesterday’s option for the same slot 60% of the time.
+Uses food substitutions to adapt recipes automatically.
 
-The result: realistic variety without being rigid or repetitive.
+Applies probability rules to balance variety vs. repetition.
 
-What this project uses
+The result is a 4-week plan that feels authored, while still flexible and personalized.
 
-Language: Python 3.8+ (standard library only)
+How it works
+1. User Profile & Calculations
 
-CLI: input() prompts (no external UI)
+The system collects: gender, age, height, weight, activity level, diet goal (lose or gain), meals per day, and dietary preferences.
 
-Data: JSON diet templates per calorie band (e.g., 2400_2600_kcal.json)
+Calorie needs are calculated:
 
-Outputs:
+Basal Metabolic Rate (BMR) → Total Daily Energy Expenditure (TDEE).
 
-Console: formatted 4-week plan
+Adjusted for the goal (−500 kcal/day for weight loss, +300 kcal/day for gain).
 
-CSV: 4_Week_Meal_Plan.csv (tabular schedule)
+The result is mapped to a calorie band (e.g. 2400–2600 kcal).
 
-CSV: user_info.csv (run inputs & computed metrics)
+2. JSON Diet Templates
 
-No third-party packages required.
+Each calorie band has a JSON template.
 
-How it works (architecture)
-1) Intake & calculations
+A template defines:
 
-Prompts: gender, height (cm), weight (kg), age, goal (lose/gain), activity level, meals/day, allergies/dislikes.
+Meal slots per day (Meal 1, Meal 2, Snack, etc.).
 
-BMR (Mifflin–St Jeor) → TDEE (activity factor).
+Options for each slot (different foods or meals to choose from).
 
-Applies goal adjustment: −500 kcal for loss, +300 kcal for gain.
+Two formats are supported, both converted to the same internal structure:
 
-Maps to a calorie band and picks the corresponding JSON file (e.g., 2532 kcal → 2400_2600_kcal.json).
+Direct slots + options.
 
-2) JSON diet templates
+Structured meals_per_day + meals list.
 
-Two supported shapes (both end up in one internal format):
+3. Excel Nutrition Database
 
-Internal format: direct slot_sequence + slots with options.
+The Excel file contains foods, calories, protein, carbs, fat, and functional tags.
 
-Structures format: templated meals_per_day + meals entries; auto-converted.
+Foods are grouped by type (protein, carb, fat, etc.) and sub-category.
 
-The planner preserves authored slot order (e.g., Meal 1 → Meal 2 → Snack → Meal 3 → Meal 4).
+The database allows:
 
-3) Preference engine (rewriting & filtering)
+Recognizing foods mentioned in the JSON templates.
 
-High-level rules: Vegan, Vegetarian, Dairy-free, Gluten-free.
+Finding substitutes when a food conflicts with dietary rules (e.g. swapping cow’s milk for oat milk).
 
-Dislike groups: seafood, red meat, poultry, pork, eggs, legumes, soy, nuts & seeds, cruciferous, nightshades, starchy veg, sweets, spicy foods.
+Maintaining calories by adjusting portion sizes when swapping.
 
-Text-aware rewriting:
+4. Preference Engine
 
-Detects tokens in option text (e.g., “chicken breast”, “eggs”, “yogurt”, “pasta”).
+The system rewrites meal options to respect rules and dislikes:
 
-Swaps to allowed replacements (e.g., tofu, fava beans, coconut yogurt, rice, etc.).
+Diet rules: Vegan, Vegetarian, Dairy-free, Gluten-free.
 
-Cleans artifacts and de-duplicates “+” items.
+Dislike groups: Seafood, Poultry, Pork, Red meat, Eggs, Legumes, Soy, Nuts & seeds, Starchy vegetables, Spicy foods, etc.
 
-Final pass filters out options that still violate constraints (fallback keeps originals if all would be removed).
+The text of each option is scanned for keywords.
 
-4) Controlled repetition (the 60/40 logic)
+Foods that violate preferences are swapped with alternatives from the Excel DB.
 
-Within a day: when two adjacent slots share the same option set, the second slot avoids the previous pick 60% of the time (so repeats still happen ~40%).
+Portion sizes are recalculated to keep calories in line.
 
-Across days: for each slot label (e.g., “meal 3”), avoid reusing yesterday’s pick 60% of the time.
+A final cleanup removes duplicates and odd artifacts in text.
 
-Uses a single RNG (seedable) so results can be reproducible.
+5. Diversity Logic (60/40 Rule)
 
-5) Output
+Meal variety is managed with probabilistic rules:
 
-Key modules & responsibilities
+Within a day: If two adjacent meals share the same option pool, the second avoids repeating the same pick 60% of the time (but allows 40% repetition).
 
-BMR/TDEE & band selection
+Across days: The same slot (e.g. “Meal 3”) avoids repeating yesterday’s option 60% of the time.
 
-bmr, TDEE, target_kcal, assign_category, compute_band_filename_from_target.
+This ensures a balance of natural repetition and healthy variety.
 
-Template loading & normalization
+6. Output
 
-load_diets_from_band, _convert_json_structure_to_internal, _slot_key_from_json_meal_number.
+The system produces:
 
-Preference engine
+A 4-week schedule of meals, grouped by week and day.
 
-Token detection: contains_any, KEYS.
+Each day includes the selected options for every slot, rewritten to reflect preferences.
 
-Rewriting: rewrite_option_text_for_prefs, _token_replace, _cleanup_artifacts, _dedupe_plus_items.
+Summary files that contain both the plan and the user profile with calculations.
 
-Replacement pools: (e.g., DAIRY/EGG/GLUTEN replacements).
+Key Modules in the System
 
-Enforcement: option_violates_prefs, filter_diet_options_by_prefs.
+Calorie Calculations → BMR, TDEE, goal adjustment, calorie band assignment.
 
-Diversity logic
+Template Normalization → Load JSON diets and convert them to a uniform internal structure.
 
-_same_option_set: compares two slot option pools.
+Excel Food Database → Load foods, macros, and tags for replacements.
 
-_pick_option_index: probabilistic avoidance (60% avoid).
+Preference Engine → Rewrite meal options to respect rules/dislikes and maintain calories.
 
-build_one_day_from_diet: within-day + across-day avoidance.
+Diversity Logic → Apply 60/40 probability rules for realistic variety.
 
-build_plan_from_diets: tracks “yesterday’s pick” per slot.
+Plan Builder → Assemble 28 days of meals from the selected diet band.
 
-CLI & output
+Export → Save plan and user profile in structured formats.
 
-run_planner: prompts, prints, writes 4_Week_Meal_Plan.csv and user_info.csv.
+System Flow (Conceptual)
 
-Extending the project
+Collect user information.
 
-Add new replacements: extend the REPLACEMENT_POOLS lists (e.g., more dairy alternatives).
+Compute calorie needs and assign a calorie band.
 
-Add new dislike categories: update KEYS (token list) + DISLIKE_GROUP_OPTIONS + option_violates_prefs mapping.
+Load the matching JSON template.
 
-Tune repetition: change the 60/40 probabilities in build_one_day_from_diet and _pick_option_index.
+Load the Excel nutrition database.
 
-More slots: include snack 2, snack 3, or meal 5/6 in slot_sequence of templates.
+Rewrite meal options using preference rules and substitutions.
 
-Limitations / assumptions
+Apply repetition logic to schedule meals.
 
-Rewriting is text-based. It doesn’t re-calculate calories for replaced items (macros logic is scaffolded for future expansion).
+Build a 4-week plan with balanced variety.
 
-Requires well-formed JSON with realistic options per slot; empty bands reduce variety.
+Output the plan and user profile.
 
-The 60/40 logic controls selection, not recipe authoring — if two slots have tiny option pools, repeats can still happen (by design).
+Limitations & Assumptions
 
-Pretty printed plan grouped by week → day → slots.
+Food substitutions are rule-based, not AI-generated recipes.
 
-CSV rows with Week, DayInWeek, AbsoluteDay, Diet Label, Diet Kcal, Slot, Option Ref, Option Name.
+Calories are estimated using per-100g scaling from the Excel DB.
 
-Run metadata appended to user_info.csv.
+Requires well-authored JSON templates for each calorie band.
+
+Variety depends on having multiple options in each slot.
+
+Does not yet rebalance macronutrients beyond calories.
+
+This documentation explains the system architecture and flow without needing to run code. It shows how the Excel nutrition database and JSON diet templates work together to create a personalized, realistic 4-week meal plan.
