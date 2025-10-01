@@ -1,0 +1,193 @@
+{
+  "diets": [
+    {
+      "label_range_kcal": "2400–2600",
+      "diet_label": "Diet 25 – 2,533 kcal",
+      "total_kcal": 2533,
+      "macros": { "carbs_g": 307, "protein_g": 174, "fat_g": 65 },
+      "structures": [
+        {
+          "meals_per_day": 3,
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["3 whole eggs", "150 g oats", "1 cup almond milk"] },
+                { "items": ["120 g smoked turkey", "7 slices brown toast", "25 almonds"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["200 g chicken breast", "350 g potatoes", "100 g green salad"] },
+                { "items": ["200 g lean beef", "300 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["200 g chicken breast", "300 g rice", "100 g green salad"] },
+                { "items": ["200 g shrimp", "350 g potato", "100 g steamed vegetables"] }
+              ]
+            }
+          ]
+        },
+        {
+          "meals_per_day": 4,
+          "variant": "snack listed separately",
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["3 whole eggs", "100 g oats", "1 cup almond milk"] },
+                { "items": ["120 g smoked turkey", "5 slices brown toast", "15 almonds"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["130 g chicken breast", "225 g potatoes", "100 g green salad"] },
+                { "items": ["130 g lean beef", "200 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": "Snack",
+              "options": [
+                { "items": ["1 banana", "200 g Greek yogurt", "100 g oats", "30 g nuts", "protein powder (scoop)"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["130 g chicken breast", "200 g rice", "100 g green salad"] },
+                { "items": ["130 g shrimp", "225 g potato", "100 g steamed vegetables"] }
+              ]
+            }
+          ]
+        },
+        {
+          "meals_per_day": 4,
+          "variant": "snack as meal 4",
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["3 whole eggs", "100 g oats", "1 cup almond milk"] },
+                { "items": ["120 g smoked turkey", "5 slices brown toast", "15 almonds"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["150 g chicken breast", "250 g potatoes", "100 g green salad"] },
+                { "items": ["150 g lean beef", "225 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["150 g chicken breast", "225 g rice", "100 g green salad"] },
+                { "items": ["150 g shrimp", "250 g potato", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 4,
+              "options": [
+                { "items": ["120 g banana", "200 g Greek yogurt", "100 g oats", "30 g nuts"] },
+                { "items": ["190 g green apple", "200 g Greek yogurt", "100 g oats", "30 g nuts"] },
+                { "items": ["150 g cottage cheese", "75 g cream of rice"] }
+              ]
+            }
+          ]
+        },
+        {
+          "meals_per_day": 5,
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["3 whole eggs", "100 g oats", "1 cup almond milk"] },
+                { "items": ["120 g smoked turkey", "5 slices brown toast", "15 almonds"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["130 g chicken breast", "225 g potatoes", "100 g green salad"] },
+                { "items": ["130 g lean beef", "200 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": "Snack",
+              "options": [
+                { "items": ["120 g banana", "200 g Greek yogurt", "100 g oats", "30 g nuts", "protein powder (scoop)"] },
+                { "items": ["190 g green apple", "200 g Greek yogurt", "100 g oats", "30 g nuts", "protein powder (scoop)"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["130 g chicken breast", "200 g rice", "100 g green salad"] },
+                { "items": ["130 g shrimp", "225 g potato", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 4,
+              "options": [
+                { "items": ["130 g chicken breast", "200 g rice", "100 g green salad"] },
+                { "items": ["130 g shrimp", "225 g potato", "100 g steamed vegetables"] }
+              ]
+            }
+          ]
+        },
+        {
+          "meals_per_day": 6,
+          "meals": [
+            {
+              "meal_number": 1,
+              "options": [
+                { "items": ["3 whole eggs", "100 g oats", "1 cup almond milk"] },
+                { "items": ["120 g smoked turkey", "5 slices brown toast", "15 almonds"] }
+              ]
+            },
+            {
+              "meal_number": 2,
+              "options": [
+                { "items": ["100 g chicken breast", "150 g potatoes", "100 g green salad"] },
+                { "items": ["100 g lean beef", "125 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 3,
+              "options": [
+                { "items": ["100 g chicken breast", "150 g potatoes", "100 g green salad"] },
+                { "items": ["100 g lean beef", "125 g rice", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": "Snack",
+              "options": [
+                { "items": ["120 g banana", "200 g Greek yogurt", "100 g oats", "30 g nuts", "protein powder (scoop)"] },
+                { "items": ["190 g green apple", "200 g Greek yogurt", "100 g oats", "30 g nuts", "protein powder (scoop)"] }
+              ]
+            },
+            {
+              "meal_number": 4,
+              "options": [
+                { "items": ["100 g chicken breast", "125 g rice", "100 g green salad"] },
+                { "items": ["100 g shrimp", "150 g potato", "100 g steamed vegetables"] }
+              ]
+            },
+            {
+              "meal_number": 5,
+              "options": [
+                { "items": ["100 g chicken breast", "125 g rice", "100 g green salad"] },
+                { "items": ["100 g shrimp", "150 g potato", "100 g steamed vegetables"] }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
